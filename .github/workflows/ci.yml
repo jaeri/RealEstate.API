@@ -48,7 +48,8 @@ jobs:
         run: |
           docker build \
             -t your-dockerhub-username/realestate-api:latest \
-            -f RealEstate.API/Dockerfile .
+            -f RealEstate.API/Dockerfile RealEstate.API
 
       - name: Push Docker image
         run: docker push your-dockerhub-username/realestate-api:latest
+
