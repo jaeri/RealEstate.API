@@ -10,7 +10,11 @@ Operational stack done:
 
 ✅ CloudBeaver usable
 
-✅ Correct Docker networking
+✅ Correct Docker networking - Production-Grade Docker (Clean Docker architecture)
+
+✅ Splitting environments (dev / prod)
+
+✅ Secrets not hardcoded - with .env file
 
 
 Next to do:
@@ -25,5 +29,4 @@ Next to do:
 🔹 Adding EF Core + migrations
 🔹 Creating your first API endpoint (Property, User, etc.)
 🔹 Securing API with JWT
-🔹 Splitting environments (dev / prod)
 🔹 Deploying this setup to a VPS or cloud
