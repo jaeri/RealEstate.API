@@ -20,15 +20,15 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        working-directory: RealEstate.API
+        working-directory: RealEstate.Api
         run: dotnet restore
 
       - name: Build
-        working-directory: RealEstate.API
+        working-directory: RealEstate.Api
         run: dotnet build --no-restore
 
       - name: Run tests
-        working-directory: RealEstate.API
+        working-directory: RealEstate.Api
         run: dotnet test --no-build --verbosity normal
 
   docker-build:
