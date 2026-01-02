@@ -14,7 +14,7 @@ Operational stack done:
 
 ✅ Splitting environments (dev / prod)
 
-✅ Secrets not hardcoded - with .env file
+✅ Secrets not hardcoded - with .env file TESt
 
 
 Next to do:

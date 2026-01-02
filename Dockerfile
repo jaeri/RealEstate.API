@@ -1,18 +1,17 @@
-# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy only the project file first for caching
+# Copy project file and restore
 COPY RealEstate.API/*.csproj ./RealEstate.API/
-WORKDIR /src/RealEstate.API
-RUN dotnet restore
+RUN dotnet restore RealEstate.API/RealEstate.API.csproj
 
 # Copy everything else
-COPY RealEstate.API/. .
-RUN dotnet publish -c Release -o /app/publish
+COPY . .
+RUN dotnet publish RealEstate.API/RealEstate.API.csproj -c Release -o /out
 
-# Runtime stage
+# Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=build /app/publish .
+COPY --from=build /out .
 ENTRYPOINT ["dotnet", "RealEstate.API.dll"]
+
