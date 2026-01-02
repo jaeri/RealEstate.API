@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Docker
+*.log
+docker-data/
+**/bin/
+**/obj/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+
+# Node / build artifacts
+node_modules/
+
+# Secrets
+*.pfx
+*.pem
